@@ -21,12 +21,13 @@ Usage Instructions
 Include the script in the head of your site.
 
 If you require a new script to be downloaded and included on your page use the following snippit.
-The first parameter is the script file you require.
-The second parameter is the callback function you wish to execute once it has loaded.
+The first parameter is the script file you require. (string)
+The second parameter is if the script has a jQuery dependancy. (boolean)
+The third parameter is the callback function you wish to execute once it has loaded. (function)
 
 <pre>
     <script type="text/javascript">
-        global.add.script('jquery.homepage-carousel.js', function () {
+        global.add.script('jquery.homepage-carousel.js', true, function () {
             alert('hello world!');
         });
     </script>
