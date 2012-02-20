@@ -1,0 +1,19 @@
+# base-js 
+### A fast & lightweight management framework for writing JavaScript. 
+
+ - Copyright 2012: Jon Muir, xtreme4s.net
+ - Dual licensed under the MIT or GPL Version 2 licenses. 
+ 
+The goal of this script is to provide a fast and lightweight JavaScript framework for use with development. The idea of optimising the page load and pulling in additional resources when needed is the bases for implementing this.
+
+Dependancies
+======
+
+Usage Instructions
+======
+
+Support & Caveats
+======
+
+How it works?
+======
