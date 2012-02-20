@@ -65,7 +65,7 @@
     global.load = {};
 
     global.scripts = [];
-    global.stylesheets = [];
+    //global.stylesheets = [];
     global.callbacks = [];
 
     global.add.script = function (src, jq, callback) {
@@ -74,12 +74,11 @@
         global.callbacks.push({ 'f': callback, 'jq': jq });
     };
 
-    global.add.stylesheet = function (src) {
+    /*global.add.stylesheet = function (src) {
         if (!src) { return; }
         global.stylesheets.push(src);
-    };
+    };*/
 
-    //define global.load.style
     global.load.scripts = function () {
         if (!global.scripts.length) { return; }
         var script = doc.createElement("script"),
@@ -102,25 +101,6 @@
             head.insertBefore(script, fc);
         } else {
             head.appendChild(script);
-        }
-    };
-
-    //define global.load.style
-    global.load.styles = function () {
-        if (!href) { return; }
-        var lk = doc.createElement("link"),
-			links = head.getElementsByTagName("link"),
-			lastlink = links[links.length - 1];
-        lk.type = "text/css";
-        lk.href = href;
-        lk.rel = "stylesheet";
-        lk.media = "all";
-
-        //might need to wait until DOMReady in IE...
-        if (lastlink.nextSibling) {
-            head.insertBefore(lk, lastlink.nextSibling);
-        } else {
-            head.appendChild(lk);
         }
     };
 
