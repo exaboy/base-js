@@ -8,7 +8,7 @@ The goal of this script is to provide a fast and lightweight JavaScript framewor
 
 Credit where Credit due
 ======
-A large part of this is taken from Scott Jehl's work on the bostoglobe.com website. The work I have done is an attempt to take this stable foundation and develope further functionality.
+A large part of this is taken from Scott Jehl's work on the bostoglobe.com website. The additional work I have done is take this stable foundation and develop further useful functionality.
 
 Dependancies
 ======
