@@ -8,7 +8,8 @@ The goal of this script is to provide a fast and lightweight JavaScript framewor
 
 Credit where Credit due
 ======
-A large part of this is taken from Scott Jehl's work on the bostonglobe.com website. The additional work I have done is take this stable foundation and develop further useful functionality.
+The base of this project is taken from Scott Jehl's work on the bostonglobe.com website. 
+The additional work I have done is take this stable base and develop further more advanced functionality out of the box.
 
 Dependancies
 ======
@@ -18,12 +19,12 @@ None
 Usage Instructions
 ======
 
-Include the script in the head of your site.
+Include the script in the head of your mark-up, There are instructions at the bottom of the script for further usage.
 
 If you require a new script to be downloaded and included on your page use the following snippit.
-The first parameter is the script file you require. (string)
-The second parameter is if the script has a jQuery dependancy. (boolean)
-The third parameter is the callback function you wish to execute once it has loaded. (function)
+ The first parameter is the script file you require. (string)
+ The second parameter is if the script has a jQuery dependancy. (boolean)
+ The third parameter is the callback function you wish to execute once it has loaded. (function)
 
 <pre>
     <script type="text/javascript">
