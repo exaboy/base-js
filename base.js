@@ -68,10 +68,10 @@
     global.stylesheets = [];
     global.callbacks = [];
 
-    global.add.script = function (src, callback) {
+    global.add.script = function (src, jq, callback) {
         if (!src) { return; }
         global.scripts.push(src);
-        global.callbacks.push(callback);
+        global.callbacks.push({ 'f': callback, 'jq': jq });
     };
 
     global.add.stylesheet = function (src) {
@@ -86,10 +86,14 @@
 			fc = head.firstChild;
         //script.src = '/js/Default.ashx?files=' + global.scripts.join(',');
         script.src = '/js/' + global.scripts.join(',');
-        // TODO: handle dependancies e.g. jquery
-	script.onload = script.onreadystatechange = function () {            
+        script.onload = script.onreadystatechange = function () {            
             for (var i in global.callbacks) {
-                global.callbacks[i]();                
+                var f = global.callbacks[i].f;
+                if (global.callbacks[i].jq) {
+                    jQuery(document).ready(function () { return f(); });
+                } else {
+                    f();    
+                };
             }
             global.callbacks = [];            
         }
