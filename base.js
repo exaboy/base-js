@@ -12,7 +12,10 @@
     var doc = win.document,
         docElem = doc.documentElement,
         head = doc.head || doc.getElementsByTagName("head")[0] || docElem;
-
+	
+    // remove the no-js (if it's still there)
+    docElem.className = docElem.className.replace(/\bno-js\b/, 'js');
+	
     var global = {};
 
     // mixins - utility object extender
